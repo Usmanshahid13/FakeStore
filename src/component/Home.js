@@ -11,18 +11,18 @@ const Home = () => {
   },[])
   const [categories, setCategories] = useState();
   return (
-   <Container>
-    <Typography variant='h3'>Shop by categories</Typography>
+   <Container sx={{marginTop:"72px"}}>
+    <Typography variant='h3'>Shop by Categories</Typography>
     <Container sx={{py:"10px"}} maxWidth="lg">
      <Grid container>
-        {/* {
-            categories.map(category=>{
-                <Grid>
+        {
+           categories && categories.map(category=> (
+                <Grid md={3} sx={{height:"16 rem",marginTop:"50px",display:"flex",flexDirection:"column",justifyContent:"space-between",alignItems:"center",textTransform:"capitalize"}} item>
            <img src="https://global-uploads.webflow.com/5f68a65d0932e3546d41cc61/5f9bfbf985f72747e74a46b5_1604058101946-ada-iq%253A-image-slider-gallery-best-shopify-apps.png" alt="img"></img>
-           <Typography variant='h5'><Link href={`/category/${category}`}>{category}</Link></Typography>
+           <Typography sx={{marginTop:"10px"}} variant='h5'><Link href={`/category/${category}`}>{category}</Link></Typography>
                </Grid>
-            }
-       ) } */}
+           )
+       ) }
      </Grid>
     </Container>
    </Container>

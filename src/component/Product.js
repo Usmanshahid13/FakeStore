@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import React from 'react'
-import StarRatings from 'react-star-ratings';
+// import StarRatings from 'react-star-ratings';
 
 
 const Product = () => {
